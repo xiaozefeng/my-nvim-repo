@@ -46,6 +46,7 @@ vim.keymap.set("n", "<leader>wq", ":Bdelete!<CR>", opt)
 -- vim.keymap.set("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 -- vim.keymap.set("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
+vim.keymap.set("n", "<leader>s" , ":Telescope find_files<CR>", opt)
 vim.keymap.set("n", "<A-o>" , ":Telescope find_files<CR>", opt)
 vim.keymap.set("n", "<leader>f" , ":Telescope live_grep<CR>", opt)
 vim.keymap.set("n", "<A-S-f>" , ":Telescope live_grep<CR>", opt)
@@ -125,6 +126,7 @@ end
 
 pluginKeys.mapToggleTerm = function(toggleterm)
   vim.keymap.set({ "n", "t" }, "<A-0>", toggleterm.toggleC)
+  vim.keymap.set({ "n", "t" }, "<leader>t", toggleterm.toggleC)
 end
 
 
